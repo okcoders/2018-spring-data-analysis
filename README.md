@@ -38,7 +38,58 @@ There are a ton of resources out there to learn data analytics, machine learning
     </thead>
     <tbody>
         <tr>
-            <th colspan="3" align="left">Week 1</th>
+            <th colspan="3" align="left">Week 1: Getting Started</th>
+        </tr>
+        <tr>
+            <td>Mon</td>
+            <td>Slack, GitHub Repo, Setting Up R/RStudio, Basic Functionality</td>
+            <td>Basic R, data types, variables, vectors, simple functions</td>
+        </tr>
+        <tr>
+            <td>Wed</td>
+            <td>Basic Statistics, R data types/operations</td>
+            <td>Slicing, Extracting, Thinking in a Vectorized way, Intro to TryR</td>
+        </tr>
+        <tr>
+            <td>Homework</td>
+            <td colspan="2" align="left">TryR: Section 1-4</td>
+        </tr>
+        <tr>
+            <th colspan="3" align="left">Week 2: More R Functionality</th>
+        </tr>
+        <tr>
+            <td>Mon</td>
+            <td>Basic Statistical Functions, Seeds, Built-in Datasets</td>
+            <td>Intro to DataFrames</td>
+        </tr>
+        <tr>
+            <td>Wed</td>
+            <td>CRAN/libraries, intro to dplyr</td>
+            <td>dplyr functions (filter, slice, sample), pipeline operator</td>
+        </tr>
+        <tr>
+            <td>Homework</td>
+            <td colspan="2" align="left">TryR: Section 5-8</td>
+        </tr>
+        <tr>
+            <th colspan="3" align="left">Week 3: Breaking Problems Down</th>
+        </tr>
+        <tr>
+            <td>Mon</td>
+            <td>Reading a CSV file, dplyr Subset Operations, Summary Functions</td>
+            <td>dplyr Mutations, Aggregation Functions</td>
+        </tr>
+        <tr>
+            <td>Wed</td>
+            <td>Solving problems with dplyr tools so far</td>
+            <td>dplyr Windowing Functions, Intro to Project 1</td>
+        </tr>
+        <tr>
+            <td>Homework</td>
+            <td colspan="2" align="left">Solving problems with dplyr</td>
+        </tr>
+        <tr>
+            <th colspan="3" align="left">Week 4: First Data Analysis Project</th>
         </tr>
         <tr>
             <td>Mon</td>
@@ -51,7 +102,11 @@ There are a ton of resources out there to learn data analytics, machine learning
             <td>TBD</td>
         </tr>
         <tr>
-            <th colspan="3" align="left">Week 2</th>
+            <td>Homework</td>
+            <td colspan="2" align="left">Project 1: TBD</td>
+        </tr>
+        <tr>
+            <th colspan="3" align="left">Week 5: Working with a Database</th>
         </tr>
         <tr>
             <td>Mon</td>
@@ -64,43 +119,8 @@ There are a ton of resources out there to learn data analytics, machine learning
             <td>TBD</td>
         </tr>
         <tr>
-            <th colspan="3" align="left">Week 3</th>
-        </tr>
-        <tr>
-            <td>Mon</td>
-            <td>TBD</td>
-            <td>TBD</td>
-        </tr>
-        <tr>
-            <td>Wed</td>
-            <td>TBD</td>
-            <td>TBD</td>
-        </tr>
-        <tr>
-            <th colspan="3" align="left">Week 4</th>
-        </tr>
-        <tr>
-            <td>Mon</td>
-            <td>TBD</td>
-            <td>TBD</td>
-        </tr>
-        <tr>
-            <td>Wed</td>
-            <td>TBD</td>
-            <td>TBD</td>
-        </tr>
-        <tr>
-            <th colspan="3" align="left">Week 5</th>
-        </tr>
-        <tr>
-            <td>Mon</td>
-            <td>TBD</td>
-            <td>TBD</td>
-        </tr>
-        <tr>
-            <td>Wed</td>
-            <td>TBD</td>
-            <td>TBD</td>
+            <td>Homework</td>
+            <td colspan="2" align="left">TBD</td>
         </tr>
         <tr>
             <th colspan="3" align="left">Week 6</th>
@@ -116,6 +136,10 @@ There are a ton of resources out there to learn data analytics, machine learning
             <td>TBD</td>
         </tr>
         <tr>
+            <td>Homework</td>
+            <td colspan="2" align="left">TBD</td>
+        </tr>
+        <tr>
             <th colspan="3" align="left">Week 7</th>
         </tr>
         <tr>
@@ -127,6 +151,10 @@ There are a ton of resources out there to learn data analytics, machine learning
             <td>Wed</td>
             <td>TBD</td>
             <td>TBD</td>
+        </tr>
+        <tr>
+            <td>Homework</td>
+            <td colspan="2" align="left">TBD</td>
         </tr>
         <tr>
             <th colspan="3" align="left">Week 8</th>
