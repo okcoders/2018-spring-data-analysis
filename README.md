@@ -1,4 +1,4 @@
-## Spring 2017 Data Analytics
+## Spring 2018 Data Analytics
 Notes, Code Samples, Exercises, and Project Instructions for the [OU-CCEW OKCoders Data Analytics Boot Camp](http://okcoders.com/uncategorized/data-analytics-bootcamp-announced-for-spring-2018-in-okc/).
 
 
@@ -7,9 +7,12 @@ This 8-week introductory bootcamp will cover the basics of data analytics using 
 
 
 ### Technology Used in this Course
++ [Slack](https://slack.com/features): Slack is a messaging tool we will use to communicate inside and outside of the classroom. It is a suped-up instant messaging client that is used throughout many organizations for internal communications. It's super easy to use and you'll get the hang of it in no time.
 + [R Programming Language](https://www.r-project.org/about.html): This is a very popular programming language that is optimized for data analysis and very easy to understand. Lots of popular data analytics and data science platforms make first class use of R functionality. Additionally, R has a very active community of developers that have built freely available packages to do very powerful things right out of the box.
 + [RStudio](https://www.rstudio.com/products/RStudio/): This is what is called an IDE: an Integrated Development Environment. This is not only where you will write your code, it how you will run it and inspect what is going on while you are building your functionality. IDE's give you a ton of added functionality to make writing, testing, and working with your code much, much easier. RStudio is an incredibly powerful tool and hopefully will become a first class citizen of your analytics toolbox.
 + [SQL](https://en.wikipedia.org/wiki/SQL): The Structured Query Language (SQL) is the primary method for interacting with [Relational Databases](https://en.wikipedia.org/wiki/Relational_database). A Relational Database is a place to house data that neatly fits into rows and columns (think Excel, but far more powerful and scalable). We will use SQL to interact with data, do simple data connection and formatting operations, and even interact with SQL from inside the analytics pipelines we will write in R.
++ [SQLite](https://en.wikipedia.org/wiki/SQLite): The specific relational database engine and environment we are going to use will be SQLite (pronounced "Sequel Light"). SQLite is an entire database that saves to a single file. We will be able to interact with all major SQL commands using this light weight database, as well as connect to it directly with R to incorporate SQL and R programming pipelines together.
++ [SQLite Browser](http://sqlitebrowser.org/): This program will be how we primarily interact with our SQLite database files, and write SQL code to query various data sets. The SQLite Browser provides a great user interface for inspecting the different tables of our database, how they relate to one another, how they are formatted (the "schema"), and for writing queries with a live feedback loop on the query output.
 
 
 ### Datasets Used in this Course
@@ -176,9 +179,16 @@ There are a ton of resources out there to learn data analytics, machine learning
 ### Environment Setup
 We will go over this in class, so don't feel too much pressure to have this done before coming. But if you can, please go ahead and set up the main components on your machine to ensure we move along speedily.
 
+#### Slack
+If you are on a Windows machine, please vist the [Slack Windows Download Center](https://slack.com/downloads/windows) and download the appropriate version for your OS. If you are using a Mac, the best way to install Slack is directly from the Mac App Store on your machine. We will not sign into the class Slack channel until the first day of class, so there is no need to do anything other than just making sure you can launch the app itself at least once.
+
 #### R
 + Please go to the [R Download Site](https://cran.cnr.berkeley.edu/) and download the Mac/Windows version as applicable to your machine. The installation instructions are right there on the site, but the installation should be minimal effort. Please make sure you do this first before attempting to download or install RStudio.
 + Please go to the [RStudio Download Site](https://www.rstudio.com/products/rstudio/download/#download) and download the "Installer for Supported Platforms" version that corresponds to your machine.
 
 #### SQL
-+ Please revisit this site as we determine what will be our solution to the software you will need to best interact with the SQL databases we intend to use.
+Please go to the [SQLite Browser](http://sqlitebrowser.org/) home page and download the Mac/Windows version as applicable to your machine. Like the other tools the installation should be quite simple and I don't anticiapte any complications. Please verify that you can open this application once installed. This is the only technology we will need for the the SQL aspects of this course.
+
+
+### About Me
+Hi. I am your instructor, Frank D. Evans. I am a Data Scientist with [Exaptive](https://www.exaptive.com/), an OKC headquartered Data Applications company. I have worked in Data Analytics of one flavor or another for the past 9 years. My professional specialty is [Graph Structure Machine Learning](https://en.wikipedia.org/wiki/Graph_theory) and [Natural Language Processing](https://en.wikipedia.org/wiki/Natural-language_processing). If you'd like to snoop on me, the best places to start are my [LinkedIn](https://www.linkedin.com/in/frankdevans/), [Twitter](https://twitter.com/frankdevans) (which I don't use very often), [GitHub](https://github.com/frankdevans),  and this awesome [image](http://www.golaurens.com/media/k2/galleries/28117/evans%20frank%2000001053211.jpg) of a guy that's definitely not me, but is the first [result](http://www.golaurens.com/crime-report/item/28117-arrest-report-for-november-6) if you Google "Frank Evans Felony".
