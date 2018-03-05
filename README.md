@@ -97,13 +97,13 @@ There are a ton of resources out there to learn data analytics, machine learning
         </tr>
         <tr>
             <td>Mon</td>
-            <td>TBD</td>
-            <td>TBD</td>
+            <td>Review so far: libraries, loading, dplyr</td>
+            <td>Start work on Project 1</td>
         </tr>
         <tr>
             <td>Wed</td>
-            <td>TBD</td>
-            <td>TBD</td>
+            <td>Live work on Project 1</td>
+            <td>Live work on Project 1</td>
         </tr>
         <tr>
             <td>Homework</td>
@@ -114,64 +114,64 @@ There are a ton of resources out there to learn data analytics, machine learning
         </tr>
         <tr>
             <td>Mon</td>
-            <td>TBD</td>
-            <td>TBD</td>
+            <td>Intro to SQL/Using the SQLite Browser</td>
+            <td>SELECT & FROM clause, projections, basic functions</td>
         </tr>
         <tr>
             <td>Wed</td>
-            <td>TBD</td>
-            <td>TBD</td>
+            <td>WHERE clause, INNER JOIN operations</td>
+            <td>OUTER JOIN operations, GROUP BY clause, SubQueries</td>
         </tr>
         <tr>
             <td>Homework</td>
-            <td colspan="2" align="left">TBD</td>
+            <td colspan="2" align="left">Answering Questions with SQL</td>
         </tr>
         <tr>
-            <th colspan="3" align="left">Week 6</th>
+            <th colspan="3" align="left">Week 6: Beginning Modeling</th>
         </tr>
         <tr>
             <td>Mon</td>
-            <td>TBD</td>
-            <td>TBD</td>
+            <td>Intro to Modeling, Linear Regression, Interrogating Results</td>
+            <td>How to set up a model, train/test, types of modeling</td>
         </tr>
         <tr>
             <td>Wed</td>
-            <td>TBD</td>
-            <td>TBD</td>
+            <td>Regression vs Classification, Building Classification Model</td>
+            <td>Putting SQL & R together</td>
         </tr>
         <tr>
             <td>Homework</td>
-            <td colspan="2" align="left">TBD</td>
+            <td colspan="2" align="left">Building a simple regression & classification model</td>
         </tr>
         <tr>
-            <th colspan="3" align="left">Week 7</th>
+            <th colspan="3" align="left">Week 7: Statistical Modeling</th>
         </tr>
         <tr>
             <td>Mon</td>
-            <td>TBD</td>
-            <td>TBD</td>
+            <td>Hyper-parameter Tuning, Model Selection</td>
+            <td>Preview of RMD, Preview of Final Project</td>
         </tr>
         <tr>
             <td>Wed</td>
-            <td>TBD</td>
-            <td>TBD</td>
+            <td>Final Project: making a plan, getting the data ready</td>
+            <td>Final project: encoding variables, get feedback loop</td>
         </tr>
         <tr>
             <td>Homework</td>
-            <td colspan="2" align="left">TBD</td>
+            <td colspan="2" align="left">Work on Final Project</td>
         </tr>
         <tr>
-            <th colspan="3" align="left">Week 8</th>
+            <th colspan="3" align="left">Week 8: The Big Project</th>
         </tr>
         <tr>
             <td>Mon</td>
-            <td>TBD</td>
-            <td>TBD</td>
+            <td>Final Project: getting model finalized end-to-end</td>
+            <td>Final Project: Intro to RMD/RPubs</td>
         </tr>
         <tr>
             <td>Wed</td>
-            <td>TBD</td>
-            <td>TBD</td>
+            <td>Final Project: Building the Write-up, Publishing your project</td>
+            <td>Final Project: Share with Peers, Present your project</td>
         </tr>
     </tbody>
 </table>
