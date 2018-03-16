@@ -80,8 +80,8 @@ There are a ton of resources out there to learn data analytics, machine learning
         </tr>
         <tr>
             <td>Mon</td>
-            <td>Reading a CSV file, dplyr Subset Operations, Summary Functions</td>
-            <td>dplyr Mutations, Aggregation Functions</td>
+            <td>Reading data from files, dplyr Summary Functions</td>
+            <td>dplyr Joining, Aggregation Functions</td>
         </tr>
         <tr>
             <td>Wed</td>
@@ -107,7 +107,7 @@ There are a ton of resources out there to learn data analytics, machine learning
         </tr>
         <tr>
             <td>Homework</td>
-            <td colspan="2" align="left">Project 1: TBD</td>
+            <td colspan="2" align="left">Project 1: Building a Data Flow Pipeline</td>
         </tr>
         <tr>
             <th colspan="3" align="left">Week 5: Working with a Database</th>
