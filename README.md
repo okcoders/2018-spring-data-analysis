@@ -102,7 +102,7 @@ There are a ton of resources out there to learn data analytics, machine learning
         </tr>
         <tr>
             <td>Wed</td>
-            <td>Live work on Project 1</td>
+            <td>Data Reshaping, Live work on Project 1</td>
             <td>Live work on Project 1</td>
         </tr>
         <tr>
