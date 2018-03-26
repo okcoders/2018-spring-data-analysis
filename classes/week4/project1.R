@@ -39,6 +39,8 @@
 # week? Do those values change if we take into account whether the person driving has a commercial
 # license or not? What if we factor out incidents that occur in work zones?
 
+# Expanding on the prior question, quantify the frequency relationship for any given hour of the day
+# compared to the overall daily rate of non-Personal Injury incidents.
 
 # Are Commerical Vehicles more or less likely to be involved in incidence where HAZMAT is needed? 
 # What about incidents that occur in Work Zones?
