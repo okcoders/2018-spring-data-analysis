@@ -115,12 +115,12 @@ There are a ton of resources out there to learn data analytics, machine learning
         <tr>
             <td>Mon</td>
             <td>Intro to SQL/Using the SQLite Browser</td>
-            <td>SELECT & FROM clause, projections, basic functions</td>
+            <td>SELECT & FROM clause, WHERE clause, basic functions</td>
         </tr>
         <tr>
             <td>Wed</td>
-            <td>WHERE clause, INNER JOIN operations</td>
-            <td>OUTER JOIN operations, GROUP BY clause, SubQueries</td>
+            <td>GROUP BY clause, INNER JOIN operations</td>
+            <td>OUTER JOIN operations, CASE, SubQueries</td>
         </tr>
         <tr>
             <td>Homework</td>
