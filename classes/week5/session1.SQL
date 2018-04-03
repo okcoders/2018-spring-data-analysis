@@ -91,7 +91,7 @@ LIMIT 10;
 SELECT first_name, last_name, company, total_worth
 FROM employees
 WHERE total_worth > 35
-    AND gender == 'Female'
+    AND gender = 'Female'
 ORDER BY company DESC
 LIMIT 10;
 
