@@ -939,3 +939,34 @@ insert into employees (id, first_name, last_name, email, gender, company, total_
 insert into employees (id, first_name, last_name, email, gender, company, total_worth, is_management, country) values ('73-2989962', 'Maynard', 'Crich', 'mcrichpp@lycos.com', 'Male', 'Quaxo', 54.9417, "false", 'Mexico');
 insert into employees (id, first_name, last_name, email, gender, company, total_worth, is_management, country) values ('85-2261335', 'Wallace', 'Leaf', 'wleafpq@blogspot.com', 'Male', 'Jaxnation', 21.7896, "false", 'Mexico');
 insert into employees (id, first_name, last_name, email, gender, company, total_worth, is_management, country) values ('37-2636646', 'Derick', 'Mullis', 'dmullispr@telegraph.co.uk', 'Male', 'Yombu', null, "false", 'Ethiopia');
+
+
+
+
+CREATE TABLE country_master (
+	country VARCHAR(255),
+	continent VARCHAR(255),
+	population INTEGER
+);
+
+INSERT INTO country_master (country, continent, population)
+VALUES
+	("Mexico", "North America", 146000000),
+	("Canada", "North America", 32000000),
+	("Ethiopia", "Africa", 17000000),
+	("Kenya", "Africa", 37000000),
+	("Congo", "Africa", 22000000),
+	("Algeria", "Africa", 8000000);
+
+
+CREATE TABLE continent_master (
+	name VARCHAR(255),
+	population INTEGER
+);
+
+INSERT INTO continent_master (name, population)
+VALUES
+	("North America", 579000000),
+	("South America", 422500000),
+	("Asia", 4436000000),
+	("Africa", 1216000000);
