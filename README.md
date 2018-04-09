@@ -127,17 +127,17 @@ There are a ton of resources out there to learn data analytics, machine learning
             <td colspan="2" align="left">Answering Questions with SQL</td>
         </tr>
         <tr>
-            <th colspan="3" align="left">Week 6: Beginning Modeling, Data Visualization</th>
+            <th colspan="3" align="left">Week 6: Data Visualization, Beginning Modeling</th>
         </tr>
         <tr>
             <td>Mon</td>
-            <td>Intro to Modeling, Linear Regression, Interrogating Results</td>
-            <td>How to set up a model, train/test, types of modeling</td>
+            <td>Intro to Data Visualization</td>
+            <td>ggplot2</td>
         </tr>
         <tr>
             <td>Wed</td>
-            <td>Regression vs Classification, Building Classification Model</td>
-            <td>Putting SQL & R together, Data Visualization</td>
+            <td>train/test, Regression vs Classification, Building Classification Model</td>
+            <td>Linear Regression, Interrogating Results</td>
         </tr>
         <tr>
             <td>Homework</td>
@@ -148,7 +148,7 @@ There are a ton of resources out there to learn data analytics, machine learning
         </tr>
         <tr>
             <td>Mon</td>
-            <td>Hyper-parameter Tuning, Model Selection, ggplot2</td>
+            <td>Putting SQL & R together, Hyper-parameter Tuning, Model Selection</td>
             <td>Preview of RMD, Preview of Final Project</td>
         </tr>
         <tr>
