@@ -1,0 +1,156 @@
+## Shine Bright
+### How well can we predict diamond price based on its size?  
+
+##### By: Frank D. Evans
+
+**Objective**: this project will look at a data set of diamonds that contains both the size (in carats) and the price (in dollars) of each diamond. The objective will be to quantify how well we can predict the price of a given diamond given only its size.
+
+To begin, we will bring in some libraries and load the dataset into memory.
+```{R message = FALSE, warning = FALSE}
+library(dplyr)
+library(ggplot2)
+library(caret)
+data("diamonds")
+```
+
+**Description**: The diamonds dataset contains information about `r nrow(diamonds)` individual diamonds.  It contains a number of different pieces of data about each diamond; such as its cut, its clarity, the depth and table it is registered under, its color rating, and an x/y/z measurement in milimeters for each. For the purposes of this analysis, the size in carats and the price in dollars will be singled out.
+
+
+**Method**
+To determine how well our model performs, we will split the data into randomly selected set to train from consisting of 75% of the data, and the remaining 25% we will use to evaluate the final model. To ensur that our model is reproducible, the random seed is set.
+```{R}
+set.seed(99)
+idx_train <- as.vector(createDataPartition(y = 1:nrow(diamonds), 
+                                           times = 1, 
+                                           p = 0.75, 
+                                           list = FALSE))
+```
+
+The full dataset is then split into a training a test set using these randomly choses indices as a cutting mechanism.
+```{R}
+train_data <- diamonds %>%
+  mutate(idx_row = 1:n()) %>%
+  filter(idx_row %in% idx_train)
+
+test_data <- diamonds %>%
+  mutate(idx_row = 1:n()) %>%
+  filter(!(idx_row %in% idx_train))
+
+dim(train_data)
+dim(test_data)
+```
+Evaluating the dimensions of the split data shows us that both still contain all original columns, but have split the original `r nrow(diamonds)` rows into a training set of `r nrow(train_data)` and a test set for evaluation of `r nrow(test_data)` records.
+
+**Exploration**
+To see visually the kind of relationship that may exist between these factors, we will plot a scatter point chart of each diamond accoriding to these factors.
+```{R}
+ggplot(data = train_data) +
+  geom_point(mapping = aes(x = carat, y = price),
+             color = 'steelblue', alpha = 0.1) +
+  labs(x = "Diamond Size (carats)", y = "Diamond Price (dollars)") + 
+  theme_minimal()
+```
+
+
+Next, our respective sets will be formatted ready for insertion into the model we will build. For the moment, we will not calculate the "answers" of the labels for the test set until we use the model to make predictions for the test set.
+```{R}
+features_train <- train_data %>%
+  select(carat)
+
+features_test <- test_data %>%
+  select(carat)
+
+labels_train <- train_data$price
+```
+
+**Pre-Modeling Exploration**
+```{R}
+summary(labels_train)
+```
+Exploring the value we are trying to predict for shows us that it is a continuous numerical value. Therefore we will be building a regression model and evaluating its ability to minimize the amount of error we would otherwise get by random guess.
+
+**Model**
+For this regression, we will use a Linear Regression Model as build by the caret R package. The Linear Regression will build a linear algebraic model based on our input data in order to provide an output function of the reltionship between the input and the output we are tryint to predict.
+```{R warning = FALSE}
+model <- train(x = features_train, y = labels_train, method = 'lm')
+model$results
+model$finalModel$coefficients
+```
+
+**Initial Results**
+The initial results tell us that the statistical relationship between the values is `r model$results$Rsquared` (the R squared value, or "Coefficient of Determination"), the amount of randomness that can be accounted for by the model for making predictions against random guessing for future data.
+
+The coefficients give us the ingredients necessary to superimpose the linear model over the original scatter chart to show scale.
+```{R}
+ggplot(data = train_data) +
+  geom_point(mapping = aes(x = carat, y = price),
+             color = 'steelblue', alpha = 0.1) +
+  geom_abline(intercept = model$finalModel$coefficients[[1]],
+              slope = model$finalModel$coefficients[[2]],
+              color = 'dark orange', size = 1.5)
+  labs(x = "Diamond Size (carats)", y = "Diamond Price (dollars)") + 
+  theme_minimal()
+```
+
+**Testing the Model**
+To test the model, we will make predictions from the testing data using the model we just built. We'll inspect the first few to make sure the data type is as expected.
+```{R}
+pred <- as.vector(predict(model, features_test))
+head(pred)
+```
+
+Next we will attach this vector of the results to the test data so we can compare them to the actuals. We will compute the error, absolute error, and squared error.
+```{R}
+test_data <- test_data %>%
+  select(carat, price) %>%
+  mutate(model_pred = pred) %>%
+  mutate(error = (pred - price),
+         abs_error = abs(pred - price),
+         sq_error = (pred - price) ^ 2)
+test_data
+```
+
+
+**Evaluation**
+First we will plot our model compared to our test data to get a visual sense of similarity.
+```{R}
+ggplot(data = test_data) +
+  geom_point(mapping = aes(x = carat, y = price),
+             color = 'steelblue', alpha = 0.1) +
+  geom_abline(intercept = model$finalModel$coefficients[[1]],
+              slope = model$finalModel$coefficients[[2]],
+              color = 'dark orange', size = 1.5)
+  labs(x = "Diamond Size (carats)", y = "Diamond Price (dollars)") + 
+  theme_minimal()
+```
+While the results themselves look as expected, we can show a histogram of the errors to better hone in on the extend our model performed well.
+```{R}
+ggplot(data = test_data) +
+  geom_histogram(mapping = aes(x = error), bins = 50,
+                 fill = 'steelblue') +
+  labs(x = "Diamond Price Error", y = "Frequqncy of error per bin") +
+  theme_minimal()
+```
+
+Since we are not specifically concerned with whether our model guessed incorrectly by a positive or negative value, concentrating on the absolute error will give a us more pure picture of the landscape.
+```{R}
+ggplot(data = test_data) +
+  geom_histogram(mapping = aes(x = abs_error), bins = 50,
+                 fill = 'dark blue') +
+  labs(x = "Diamond Price Error", y = "Frequqncy of error per bin") +
+  theme_minimal()
+```
+
+**Conclusion**
+While a seemingly large amount of randomness can be accounted for only within the mass size of a diamond, there is a considerable amount of the price that is not directly attributable to this factor. Given other elements of a diamond (such as its cut, its clarity, its specific dimensions, and its color rating), a minority of the remaining value may be attributable to these elements. Further analysis would determine if this was so and to what degree.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+## This is the Name of my Project
+#### This is the subtitle
+
+
+**First Section**
+This is where I am going to write a basic part of my project and show the libraries.
+```{R echo = TRUE, message = FALSE}
+library(dplyr)
+library(ggplot2)
+data(diamonds)
+```
+
+Then I will wrote some thigns where I put an inline piece that code that will tell you that this dataset has `r nrow(diamonds)` individual pieces of data.  
+
+Then I am going to make another block of code that I print to screen the summary of the data.
+```{R echo = TRUE}
+summary(diamonds)
+```
+
+
+**Second Section**
+This is where I make *some more analysis* and do some things.
+```{R}
+ggplot(data = diamonds) +
+  geom_histogram(mapping = aes(x = price),
+                 bins = 50, fill = 'dark red') +
+  labs(title = "Here is my title",
+       x = "This is the X axis",
+       y = "This is the y axis") +
+  theme_light()
+```
+
+Then here at the bottom I can add my final thoughts and awesome analysis that will get me hired!
